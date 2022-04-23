@@ -1,6 +1,5 @@
 #include "banking.hpp"
 
-
 int main()
 {
 	std::vector<AccountInfo> account_list(100);
@@ -15,7 +14,6 @@ int main()
 		switch (num_select)
 		{
 		case ksign: 
-		//	SignInAccount(account_list, current_back);
        		account_list.at(current_back) = AccountInfo(current_back);
 			break;
 		case kDeposit:
@@ -34,16 +32,5 @@ int main()
 			break;
 		} 
 	}
-	
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
