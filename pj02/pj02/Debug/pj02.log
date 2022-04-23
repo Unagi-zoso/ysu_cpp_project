@@ -1,0 +1,14 @@
+﻿  main.cpp
+C:\Users\corvo\source\repos\StudyCpp\oopProject\ysu_cpp_project\pj02\pj02\banking.hpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\corvo\source\repos\StudyCpp\oopProject\ysu_cpp_project\pj02\pj02\banking.hpp(41,20): warning C4101: 'expn' :참조되지 않은 지역 변수입니다.
+C:\Users\corvo\source\repos\StudyCpp\oopProject\ysu_cpp_project\pj02\pj02\banking.hpp(53,49): warning C4244: 'return': 'const unsigned __int64'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\corvo\source\repos\StudyCpp\oopProject\ysu_cpp_project\pj02\pj02\banking.hpp(98,40): warning C4244: '인수': 'unsigned __int64'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\corvo\source\repos\StudyCpp\oopProject\ysu_cpp_project\pj02\pj02\banking.hpp(100,20): warning C4101: 'expn' :참조되지 않은 지역 변수입니다.
+C:\Users\corvo\source\repos\StudyCpp\oopProject\ysu_cpp_project\pj02\pj02\banking.hpp(118,20): warning C4101: 'expn' :참조되지 않은 지역 변수입니다.
+C:\Users\corvo\source\repos\StudyCpp\oopProject\ysu_cpp_project\pj02\pj02\banking.hpp(131,20): warning C4101: 'expn' :참조되지 않은 지역 변수입니다.
+C:\Users\corvo\source\repos\StudyCpp\oopProject\ysu_cpp_project\pj02\pj02\banking.hpp(163,18): warning C4101: 'expn' :참조되지 않은 지역 변수입니다.
+C:\Users\corvo\source\repos\StudyCpp\oopProject\ysu_cpp_project\pj02\pj02\banking.hpp(197,16): warning C4101: 'expn' :참조되지 않은 지역 변수입니다.
+  banking.cpp
+  코드를 생성하고 있습니다...
+main.obj : error LNK2019: "public: virtual __thiscall AccountInfo::~AccountInfo(void)" (??1AccountInfo@@UAE@XZ)"public: virtual void * __thiscall AccountInfo::`scalar deleting destructor'(unsigned int)" (??_GAccountInfo@@UAEPAXI@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\corvo\source\repos\StudyCpp\oopProject\ysu_cpp_project\pj02\Debug\pj02.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.

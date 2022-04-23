@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Banking.cpp" />
-    <ClCompile Include="source.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Banking.h" />

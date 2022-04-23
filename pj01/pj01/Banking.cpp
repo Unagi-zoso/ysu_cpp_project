@@ -19,24 +19,23 @@ void view_menu()
 {
 	std::cout <<
 		"-----Menu-----\n"
-		"1. °èÁÂ°³¼³\n"
-		"2. ÀÔ ±Ý\n"
-		"3. Ãâ ±Ý\n"
-		"4. °èÁÂÁ¤º¸ ÀüÃ¼ Ãâ·Â\n"
-		"5. ÇÁ·Î±×·¥ Á¾·á\n";
+		"1. ï¿½ï¿½ï¿½Â°ï¿½ï¿½ï¿½\n"
+		"2. ï¿½ï¿½ ï¿½ï¿½\n"
+		"3. ï¿½ï¿½ ï¿½ï¿½\n"
+		"4. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½\n"
+		"5. ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½\n";
 }
-
 void select_menu_num(unsigned & num_select)
 {
 	try
 	{
 		std::cin >> num_select;
 		if (num_select < 1 || num_select > 5) throw num_select;
-		std::cout << "¼±ÅÃ: " << num_select << std::endl;
+		std::cout << "ï¿½ï¿½ï¿½ï¿½: " << num_select << std::endl;
 	}
 	catch (unsigned expn)
 	{
-		std::cout << "¹øÈ£¸¦ Àß¸ø ÀûÀ¸¼Ì½À´Ï´Ù.\n";
+		std::cout << "ï¿½ï¿½È£ï¿½ï¿½ ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Ï´ï¿½.\n";
 		exit(1);
 	}
 }
@@ -51,13 +50,13 @@ void sign_in_account(std::vector<Account>& account_list, unsigned current_back)
 	try
 	{
 		if (current_back < 0 || current_back >= UINT_MAX) throw current_back;
-		std::cout << "[°èÁÂ°³¼³]\n°èÁÂID: ";
+		std::cout << "[ï¿½ï¿½ï¿½Â°ï¿½ï¿½ï¿½]\nï¿½ï¿½ï¿½ï¿½ID: ";
 		std::cin >> account_id;
 		if (account_id < 0 || account_id < UINT_MAX) throw account_id;
-		std::cout << "ÀÌ¸§: ";
+		std::cout << "ï¿½Ì¸ï¿½: ";
 		std::cin >> account_name;
 		if (account_name.length() < 0 || account_name.length() < name_leng) throw account_name.length();
-		std::cout << "ÀÔ±Ý¾×: ";
+		std::cout << "ï¿½Ô±Ý¾ï¿½: ";
 		std::cin >> account_money;
 		if (account_money < 0 || account_money < ULLONG_MAX) throw account_money;
 
@@ -68,8 +67,8 @@ void sign_in_account(std::vector<Account>& account_list, unsigned current_back)
 	}
 	catch (int expn)
 	{
-		//std::cout << "ÃÖ´ë °³¼³·®¿¡ µµ´ÞÇÏ¿´½À´Ï´Ù. ÇöÀç ¼ö : \n" << expn;
-		std::cout << "´Ù½Ã È®ÀÎºÎÅ¹µå¸³´Ï´Ù.\n";
+		//std::cout << "ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ : \n" << expn;
+		std::cout << "ï¿½Ù½ï¿½ È®ï¿½Îºï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.\n";
 		exit(1);
 	}
 }
@@ -80,9 +79,9 @@ void deposit_account(std::vector<Account>& account_list)
 	{
 		unsigned id_match = 0;
 		unsigned long long money_to_deposit = 0;
-		std::cout << "[ÀÔ   ±Ý]\n°èÁÂID : ";
+		std::cout << "[ï¿½ï¿½   ï¿½ï¿½]\nï¿½ï¿½ï¿½ï¿½ID : ";
 		std::cin >> id_match;
-		std::cout << "ÀÔ±Ý¾×: ";
+		std::cout << "ï¿½Ô±Ý¾ï¿½: ";
 		std::cin >> money_to_deposit;
 		if (money_to_deposit <= 0 || money_to_deposit > ULLONG_MAX) throw money_to_deposit;
 
@@ -93,7 +92,7 @@ void deposit_account(std::vector<Account>& account_list)
 	}
 	catch (int expn)
 	{
-		"¹øÈ£¸¦ Àß¸ø ÀûÀ¸¼Ì½À´Ï´Ù.\n";
+		"ï¿½ï¿½È£ï¿½ï¿½ ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Ï´ï¿½.\n";
 		exit(1);
 	}
 }
@@ -106,9 +105,9 @@ void withdraw_account(std::vector<Account>& account_list)
 		unsigned match_idx = 0;
 		unsigned money_to_withdraw = 0;
 
-		std::cout << "[Ãâ   ±Ý]\n°èÁÂID : ";
+		std::cout << "[ï¿½ï¿½   ï¿½ï¿½]\nï¿½ï¿½ï¿½ï¿½ID : ";
 		std::cin >> id_match;
-		std::cout << "Ãâ±Ý¾×: ";
+		std::cout << "ï¿½ï¿½Ý¾ï¿½: ";
 		std::cin >> money_to_withdraw;
 		if (money_to_withdraw <= 0) throw money_to_withdraw;
 
@@ -118,7 +117,7 @@ void withdraw_account(std::vector<Account>& account_list)
 	}
 	catch (int expn)
 	{
-		"¹øÈ£¸¦ Àß¸ø ÀûÀ¸¼Ì½À´Ï´Ù.\n";
+		"ï¿½ï¿½È£ï¿½ï¿½ ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Ï´ï¿½.\n";
 		exit(1);
 	}
 }
@@ -128,17 +127,17 @@ void show_account_info(std::vector<Account>& account_list)
 	try
 	{
 		unsigned id_match = 0;
-		std::cout << "°èÁÂID : ";
+		std::cout << "ï¿½ï¿½ï¿½ï¿½ID : ";
 		std::cin >> id_match;
 
 
 		Account& account_present = match_id(account_list, id_match);
-		std::cout << "ÀÌ¸§: " << account_present.account_name << std::endl <<
-			"ÀÜ¾×: " << account_present.account_money << std::endl;
+		std::cout << "ï¿½Ì¸ï¿½: " << account_present.account_name << std::endl <<
+			"ï¿½Ü¾ï¿½: " << account_present.account_money << std::endl;
 	}
 	catch (int expn)
 	{
-		"ID¸¦ ´Ù½Ã È®ÀÎ ºÎÅ¹µå¸³´Ï´Ù.\n";
+		"IDï¿½ï¿½ ï¿½Ù½ï¿½ È®ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.\n";
 		exit(1);
 	}
 	
