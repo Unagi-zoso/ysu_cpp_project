@@ -39,7 +39,6 @@ public:
         }
         catch (int expn)
         {
-            //std::cout << "?뜝?뙇?뙋?삕 ?뜝?룞?삕?뜝?룞?삕?뜝?룞?삕?뜝?룞?삕 ?뜝?룞?삕?뜝?룞?삕?뜝?떦?슱?삕?뜝?룞?삕?뜝?떦?뙋?삕. ?뜝?룞?삕?뜝?룞?삕 ?뜝?룞?삕 : \n" << expn;
             std::cout << "다시 확인부탁드립니다.\n";
             exit(1);
         } 
@@ -66,7 +65,7 @@ public:
         if (money_to_decrease > account_money) throw money_to_decrease;
     }
 
-        static AccountInfo& MatchId(std::vector<AccountInfo> & account_list, unsigned id_match)
+    static AccountInfo& MatchId(std::vector<AccountInfo> & account_list, unsigned id_match)
     {
         for (AccountInfo& id_list : account_list)
         {
@@ -120,7 +119,7 @@ public:
         }
     }
     
-    void ShowAccountInfo()   // const ?뜝?룞?삕?뜝?떦?냲?삕?
+    void ShowAccountInfo() const 
     {
         try
         {
@@ -195,15 +194,8 @@ void SignInAccount(std::vector<AccountInfo>& account_list, unsigned& current_bac
     }
     catch (int expn)
     {
-        //std::cout << "?뜝?뙇?뙋?삕 ?뜝?룞?삕?뜝?룞?삕?뜝?룞?삕?뜝?룞?삕 ?뜝?룞?삕?뜝?룞?삕?뜝?떦?슱?삕?뜝?룞?삕?뜝?떦?뙋?삕. ?뜝?룞?삕?뜝?룞?삕 ?뜝?룞?삕 : \n" << expn;
+
         std::cout << "다시 확인부탁드립니다.\n";
         exit(1);
     }
 }
-
-
-class BankingServiceInstructor : public AccountInfo
-{
-public:
-
-};

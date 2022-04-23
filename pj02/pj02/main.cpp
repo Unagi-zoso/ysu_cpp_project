@@ -19,14 +19,14 @@ int main()
        		account_list.at(current_back) = AccountInfo(current_back);
 			break;
 		case kDeposit:
-            BankingServiceInstructor::MatchId(account_list, BankingServiceInstructor::GetId()).DepositAccount();
+            AccountInfo::MatchId(account_list, AccountInfo::GetId()).DepositAccount();
 			break;
 		case kWithdraw:
-            BankingServiceInstructor::MatchId(account_list, BankingServiceInstructor::GetId()).WithdrawAccount();
+            AccountInfo::MatchId(account_list, AccountInfo::GetId()).WithdrawAccount();
 			break;
 		case kShow_All:
 			//ShowAccountInfo(account_list);
-            BankingServiceInstructor::MatchId(account_list, BankingServiceInstructor::GetId()).ShowAccountInfo();
+            AccountInfo::MatchId(account_list, AccountInfo::GetId()).ShowAccountInfo();
 			break;
 		case kExit:
 			return 0;
