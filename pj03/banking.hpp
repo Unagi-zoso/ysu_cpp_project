@@ -5,15 +5,16 @@
 #pragma once
 
 enum { ksign = 1, kDeposit, kWithdraw, kShow_All, kExit } e_Num_Select;
-enum { kMaxNameSize = 20 } e_Name_Const;
 typedef int Num_Select;
+enum { kMaxNameSize = 20 } e_Name_Const;
+typedef int Name_Const;
 
 class AccountInfo
 {
 public:
     AccountInfo() = default;
     AccountInfo(unsigned& current_back);
-    AccountInfo(AccountInfo& original_obj);
+    AccountInfo(const AccountInfo& original_obj);
     
     virtual ~AccountInfo();
     
